@@ -1,6 +1,6 @@
 ﻿namespace CashierApplication
 {
-    partial class Form1
+    partial class frmPurchaseDiscountedItem
     {
         /// <summary>
         ///  Required designer variable.
@@ -44,6 +44,14 @@
             btnSubmit = new Button();
             label8 = new Label();
             lblChange = new Label();
+            menuStrip1 = new MenuStrip();
+            menuStrip = new ToolStripMenuItem();
+            logOutToolStripMenuItem1 = new ToolStripMenuItem();
+            exitApplicationToolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            logOutToolStripMenuItem = new ToolStripMenuItem();
+            exitApplicationToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -180,7 +188,55 @@
             lblChange.Size = new Size(0, 15);
             lblChange.TabIndex = 15;
             // 
-            // Form1
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuStrip, toolStripMenuItem1 });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(363, 24);
+            menuStrip1.TabIndex = 16;
+            menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
+            // 
+            // menuStrip
+            // 
+            menuStrip.DropDownItems.AddRange(new ToolStripItem[] { logOutToolStripMenuItem1, exitApplicationToolStripMenuItem1 });
+            menuStrip.Name = "menuStrip";
+            menuStrip.Size = new Size(37, 20);
+            menuStrip.Text = "File";
+            // 
+            // logOutToolStripMenuItem1
+            // 
+            logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
+            logOutToolStripMenuItem1.Size = new Size(157, 22);
+            logOutToolStripMenuItem1.Text = "Logout";
+            logOutToolStripMenuItem1.Click += logOutToolStripMenuItem1_Click;
+            // 
+            // exitApplicationToolStripMenuItem1
+            // 
+            exitApplicationToolStripMenuItem1.Name = "exitApplicationToolStripMenuItem1";
+            exitApplicationToolStripMenuItem1.Size = new Size(157, 22);
+            exitApplicationToolStripMenuItem1.Text = "Exit Application";
+            exitApplicationToolStripMenuItem1.Click += exitApplicationToolStripMenuItem1_Click;
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(12, 20);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            logOutToolStripMenuItem.Size = new Size(180, 22);
+            logOutToolStripMenuItem.Text = "Log Out";
+            // 
+            // exitApplicationToolStripMenuItem
+            // 
+            exitApplicationToolStripMenuItem.Name = "exitApplicationToolStripMenuItem";
+            exitApplicationToolStripMenuItem.Size = new Size(180, 22);
+            exitApplicationToolStripMenuItem.Text = "Exit Application";
+            // 
+            // frmPurchaseDiscountedItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -201,9 +257,12 @@
             Controls.Add(txtDiscount);
             Controls.Add(txtItemName);
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "frmPurchaseDiscountedItem";
+            Controls.Add(menuStrip1);
+            Name = "frmPurchaseDiscountedItem";
+            Text = "PurchaseDiscountedItem";
             Load += Form1_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -226,5 +285,12 @@
         private Button btnSubmit;
         private Label label8;
         private Label lblChange;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuStrip;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem logOutToolStripMenuItem;
+        private ToolStripMenuItem exitApplicationToolStripMenuItem;
+        private ToolStripMenuItem logOutToolStripMenuItem1;
+        private ToolStripMenuItem exitApplicationToolStripMenuItem1;
     }
 }

@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace CashierApplication
 {
-    public partial class Form1 : Form
+    public partial class frmPurchaseDiscountedItem : Form
     {
-        public Form1()
+        public frmPurchaseDiscountedItem()
         {
             InitializeComponent();
         }
@@ -58,6 +58,23 @@ namespace CashierApplication
             {
                 MessageBox.Show("Please enter valid numerical values for payment received.");
             }
+        }
+
+        private void logOutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLoginAccount loginForm = new frmLoginAccount();
+            loginForm.Show();
+        }
+
+        private void exitApplicationToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
